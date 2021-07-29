@@ -23,6 +23,8 @@
 //*****************************************************************************
 
 #include <stdint.h>
+#include "stdbool.h"
+#include <driverlib/sysctl.h>
 
 //*****************************************************************************
 //
@@ -288,7 +290,7 @@ ResetISR(void)
     // this project.
     //
     HWREG(0xE000ED88) = ((HWREG(0xE000ED88) & ~0x00F00000) | 0x00F00000);
-    
+    SysCtlClockSet(SYSCTL_SYSDIV_1 | SYSCTL_USE_PLL | SYSCTL_XTAL_16MHZ | SYSCTL_OSC_MAIN);
     //
     // Call the application's entry point.
     //
