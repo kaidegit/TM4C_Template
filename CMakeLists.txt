@@ -38,7 +38,7 @@ include_directories(
     Drivers
 )
 
-add_definitions(-DTARGET_IS_TM4C123_RB1)
+add_definitions(-DTARGET_IS_TM4C123_RB1 -DPART_TM4C123GH6PM -Dgcc)
 
 file(GLOB_RECURSE SOURCES "StartUp/*.*" "Core/*.*")
 
