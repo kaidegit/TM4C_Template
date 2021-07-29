@@ -40,7 +40,7 @@ include_directories(
 
 add_definitions(-DTARGET_IS_TM4C123_RB1)
 
-file(GLOB_RECURSE SOURCES "startup/*.*" "Core/*.*")
+file(GLOB_RECURSE SOURCES "StartUp/*.*" "Core/*.*")
 
 link_libraries(${CMAKE_SOURCE_DIR}/Drivers/driverlib/gcc/libdriver.a)
 
